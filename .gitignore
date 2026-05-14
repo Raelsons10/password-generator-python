@@ -1,4 +1,23 @@
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Virtual environment
 .venv/
+venv/
+env/
+
+# Environment variables
 .env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
