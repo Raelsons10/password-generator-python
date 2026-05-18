@@ -4,7 +4,7 @@ from utils import is_an_integer, is_valid_password_length
 
 # Unit tests of the function is_valid_password_length.
 def test_is_valid_password_length():
-    val1 = 8
+    val1 = 12
     val2 = 29
     assert is_valid_password_length(val1)
     assert is_valid_password_length(val2)
