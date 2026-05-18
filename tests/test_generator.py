@@ -10,10 +10,10 @@ def test_validate_password_generator_characters():
 
     has_number = any(carac.isdigit() for carac in password)
     has_uppercase = any(carac.isupper() for carac in password)
-    haas_lowercase = any(carac.islower() for carac in password)
+    has_lowercase = any(carac.islower() for carac in password)
     has_symbol = any(carac in string.punctuation for carac in password)
     assert has_number
     assert has_uppercase
-    assert haas_lowercase
+    assert has_lowercase
     assert has_symbol
 
