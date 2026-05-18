@@ -6,4 +6,4 @@ def is_an_integer(password):
         return False
     
 def is_valid_password_length(password):
-    return password >= 8
+    return password >= 12
