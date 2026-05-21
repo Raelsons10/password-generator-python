@@ -4,6 +4,7 @@
 Gerador de senhas seguras desenvolvido em Python com foco em estudo de arquitetura, modularização, validações, testes automatizados e boas práticas de desenvolvimento.
 
 O sistema gera senhas aleatórias fortes utilizando geração criptofraficamente segura com o módulo `secrets`.
+---
 
 ## Funcionalidades
 
@@ -16,10 +17,12 @@ O sistema gera senhas aleatórias fortes utilizando geração criptofraficamente
     - símbolos
 - Modularização do projeto
 - Testes automatizados
+---
 
 ## Tecnologias utilizadas
 - Python
 - Pytest
+---
 
 ## Estrutura do projeto
 ```
@@ -39,6 +42,7 @@ PASSWORD_GENERATOR/
 │   │   __init__.py
 │     
 ```
+---
 
 ## Como executar
 
@@ -64,11 +68,14 @@ Execute o projeto:
 ```bash
 python main.py
 ```
+---
+
 ## Executando testes
 
 ```bash
 pytest tests/ -v
 ```
+---
 
 ## Política de segurança da senha
 
@@ -80,6 +87,7 @@ As senhas geradas possuem obrigatoriamente
 - 1 símbolo
 
 Alíem disso, a geração utiliza o módulo `secrets`, aprimorado para aplicações relacionadas á autenticação e segurança.
+---
 
 ## Exemplo de uso
 
@@ -89,6 +97,7 @@ Informe o tamanho da senha que deseja gerar: 12
 Sua senha gerada:
 A@9x!K2p#Lm1
 ```
+---
 
 ## Arquitetura
 
@@ -97,6 +106,7 @@ O projeto foi organizado em módulos separados para melhorar:
 - legibilidade
 - reutilização de código
 - separação de responsabilidades
+---
 
 ## Objetivos do projeto
 
@@ -108,6 +118,7 @@ Este projeto foi desenvolvido com foco em:
 - testes automatizados
 - boas práticas
 - versionamento com Git e GitHub
+---
 
 ## Melhorias futuras
 
