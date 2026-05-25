@@ -2,7 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-from password_creation_path import password_router
+from routes.password_creation_path import password_router
+
 
 app.include_router(password_router)
 
