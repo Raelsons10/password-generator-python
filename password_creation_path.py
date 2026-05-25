@@ -1,10 +1,10 @@
 from fastapi import APIRouter
 from generator import generator_password
-from schemas import PasswordRequest
+from schemas import PasswordRequest, PasswordResponse
 
 password_router = APIRouter(prefix="/create_password", tags=["create_password"])
 
-@password_router.post("/generate_password")
+@password_router.post("/generate_password", response_model=PasswordResponse)
 async def create_password(request: PasswordRequest):
         generated_password = generator_password(request.length)
         return {
