@@ -67,13 +67,13 @@ cd password-generator-python
 #### Windows
 
 ```bash
-python -m venv .venv
+python -m venv venv
 ```
 
 #### Linux/Mac
 
 ```bash
-python3 -m venv .venv
+python3 -m venv venv
 ```
 
 ---
@@ -83,13 +83,13 @@ python3 -m venv .venv
 ### Windows
 
 ```bash
-.venv\Scripts\activate
+venv\Scripts\activate
 ```
 
 ### Linux/Mac
 
 ```bash
-source .venv/bin/activate
+source venv/bin/activate
 ```
 
 ---
