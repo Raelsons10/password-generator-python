@@ -27,15 +27,15 @@ A aplicação permite gerar senhas personalizadas com tamanho configurável, gar
 
 ## 📂 Estrutura do projeto
 
-```text
-password_generator/
+```password_generator/
 │
 ├── routes/
 │   └── password_creation_path.py
 │
 ├── tests/
-│   ├── test_api.py
-│   └── test_generator.py
+│   ├── test_generator.py
+│   ├── test_password_creation_path.py
+│   └── test_validations.py
 │
 ├── api.py
 ├── generator.py
