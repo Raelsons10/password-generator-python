@@ -157,6 +157,12 @@ POST /create_password/generate_password
 pytest -v
 ```
 
+A suíte tem 10 testes, que cobrem:
+
+- **Gerador:** o tamanho da senha e a presença de maiúscula, minúscula, número e símbolo.
+- **API:** a geração com sucesso, o valor padrão quando o tamanho não é informado e a rejeição do tamanho inválido (422) e o tipo inválido (422).
+- **Validações:** as funções auxiliares que checam o tamanho mínimo e se um valor é um número inteiro.
+
 ---
 
 ## ✅ Funcionalidades
