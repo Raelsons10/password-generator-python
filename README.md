@@ -112,13 +112,13 @@ Após iniciar o servidor:
 
 ### API
 
-```text
+```
 http://127.0.0.1:8000
 ```
 
 ### Swagger/OpenAPI
 
-```text
+```
 http://127.0.0.1:8000/docs
 ```
 
@@ -144,7 +144,7 @@ POST /create_password/generate_password
 
 ```json
 {
-  "password": "@Ab12#xYz9!",
+  "password": "8B`N%;NV8*t9",
   "length": 12
 }
 ```
