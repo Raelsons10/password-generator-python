@@ -177,6 +177,14 @@ A suíte tem 10 testes, que cobrem:
 
 ---
 
+## 🔐 Como funciona
+
+- **Aleatoriedade segura:** a geração usa o módulo `secrets`, e não `random`. O `random` é pseudoaleatório e previsível; o `secrets` usa a fonte de aleatoriedade do sistema operacional, própria para senhas.
+- **Composição garatida:** o gerador sorteia primeiro um caractere de cada tipo(maiúscula, minúscula, número e símbolo) e preenche o restante com o conjunto completo.
+- **Embaralhamento final:** a lista é embaralhada (também com fonte segura) para que a posição de cada tipo de caractere não seja previsível.
+
+---
+
 ## 🎯 Objetivos do projeto
 
 Este projeto foi desenvolvido com foco em:
