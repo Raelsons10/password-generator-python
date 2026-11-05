@@ -15,6 +15,8 @@ A aplicação permite gerar senhas personalizadas com tamanho configurável, gar
 
 ---
 
+![Swagger mostrando a requisição e a resposta 200](docs/images/swagger.png)
+
 ## 🚀 Tecnologias utilizadas
 
 - Python 3.13
