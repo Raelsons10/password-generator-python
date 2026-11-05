@@ -15,6 +15,8 @@ A aplicação permite gerar senhas personalizadas com tamanho configurável, gar
 
 ---
 
+![Swagger mostrando a requisição e a resposta 200](docs/images/swagger.png)
+
 ## 🚀 Tecnologias utilizadas
 
 - Python 3.13
@@ -27,15 +29,15 @@ A aplicação permite gerar senhas personalizadas com tamanho configurável, gar
 
 ## 📂 Estrutura do projeto
 
-```text
-password_generator/
+```password_generator/
 │
 ├── routes/
 │   └── password_creation_path.py
 │
 ├── tests/
-│   ├── test_api.py
-│   └── test_generator.py
+│   ├── test_generator.py
+│   ├── test_password_creation_path.py
+│   └── test_validations.py
 │
 ├── api.py
 ├── generator.py
@@ -67,13 +69,13 @@ cd password-generator-python
 #### Windows
 
 ```bash
-python -m venv .venv
+python -m venv venv
 ```
 
 #### Linux/Mac
 
 ```bash
-python3 -m venv .venv
+python3 -m venv venv
 ```
 
 ---
@@ -83,13 +85,13 @@ python3 -m venv .venv
 ### Windows
 
 ```bash
-.venv\Scripts\activate
+venv\Scripts\activate
 ```
 
 ### Linux/Mac
 
 ```bash
-source .venv/bin/activate
+source venv/bin/activate
 ```
 
 ---
@@ -112,13 +114,13 @@ Após iniciar o servidor:
 
 ### API
 
-```text
+```
 http://127.0.0.1:8000
 ```
 
 ### Swagger/OpenAPI
 
-```text
+```
 http://127.0.0.1:8000/docs
 ```
 
@@ -144,7 +146,7 @@ POST /create_password/generate_password
 
 ```json
 {
-  "password": "@Ab12#xYz9!",
+  "password": "8B`N%;NV8*t9",
   "length": 12
 }
 ```
@@ -157,6 +159,12 @@ POST /create_password/generate_password
 pytest -v
 ```
 
+A suíte tem 10 testes, que cobrem:
+
+- **Gerador:** o tamanho da senha e a presença de maiúscula, minúscula, número e símbolo.
+- **API:** a geração com sucesso, o valor padrão quando o tamanho não é informado e a rejeição do tamanho inválido (422) e o tipo inválido (422).
+- **Validações:** as funções auxiliares que checam o tamanho mínimo e se um valor é um número inteiro.
+
 ---
 
 ## ✅ Funcionalidades
@@ -168,6 +176,14 @@ pytest -v
 - Testes automatizados
 - Response Models
 - Documentação automática Swagger/OpenAPI
+
+---
+
+## 🔐 Como funciona
+
+- **Aleatoriedade segura:** a geração usa o módulo `secrets`, e não `random`. O `random` é pseudoaleatório e previsível; o `secrets` usa a fonte de aleatoriedade do sistema operacional, própria para senhas.
+- **Composição garatida:** o gerador sorteia primeiro um caractere de cada tipo(maiúscula, minúscula, número e símbolo) e preenche o restante com o conjunto completo.
+- **Embaralhamento final:** a lista é embaralhada (também com fonte segura) para que a posição de cada tipo de caractere não seja previsível.
 
 ---
 
